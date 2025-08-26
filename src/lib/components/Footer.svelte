@@ -1,5 +1,12 @@
 <script lang="ts">
+	import { _ } from '$lib/i18n';
+
 	const currentYear = new Date().getFullYear();
+
+	// Helper function to replace {year} in copyright text
+	function formatCopyright(text: string): string {
+		return text.replace('{year}', currentYear.toString());
+	}
 </script>
 
 <footer class="footer-wrapper">
@@ -8,60 +15,46 @@
 		<div class="contacts-grid">
 			<!-- Contact 1 -->
 			<div class="contact-card">
-				<h4 class="contact-name">Muki-Auh Auh</h4>
-				<p class="contact-title">Tegevjuht</p>
-				<div class="contact-info">
-					<a href="tel:+3725188209" class="contact-link">
-						<svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-						</svg>
-						+372 518 8209
-					</a>
-					<a href="mailto:test@pilvel.ee" class="contact-link">
-						<svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-						</svg>
-						test@pilvel.ee
-					</a>
-				</div>
+				<h4 class="contact-name">{$_('footer.contacts.person1_name')}</h4>
+				<p class="contact-title">{$_('footer.contacts.person1_title')}</p>
 			</div>
 
 			<!-- Contact 2 -->
 			<div class="contact-card">
-				<h4 class="contact-name">Kassi Kiusaja</h4>
-				<p class="contact-title">Müügijuht</p>
+				<h4 class="contact-name">{$_('footer.contacts.person2_name')}</h4>
+				<p class="contact-title">{$_('footer.contacts.person2_title')}</p>
 				<div class="contact-info">
-					<a href="tel:+3725188209" class="contact-link">
+					<a href="tel:+3725143247" class="contact-link">
 						<svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
 						</svg>
-						+372 518 8209
+						+372 514 3247
 					</a>
-					<a href="mailto:test@pilvel.ee" class="contact-link">
+					<a href="mailto:toomas@werterix.ee" class="contact-link">
 						<svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
 						</svg>
-						test@pilvel.ee
+						toomas@werterix.ee
 					</a>
 				</div>
 			</div>
 
 			<!-- Contact 3 -->
 			<div class="contact-card">
-				<h4 class="contact-name">Koera-Saba Liputaja</h4>
-				<p class="contact-title">Klienditoejuht</p>
+				<h4 class="contact-name">{$_('footer.contacts.person3_name')}</h4>
+				<p class="contact-title">{$_('footer.contacts.person3_title')}</p>
 				<div class="contact-info">
-					<a href="tel:+3725188209" class="contact-link">
+					<a href="tel:+37252 8380" class="contact-link">
 						<svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
 						</svg>
-						+372 518 8209
+						+372 526 8380
 					</a>
-					<a href="mailto:test@pilvel.ee" class="contact-link">
+					<a href="mailto:angelaleiaru@gmail.com" class="contact-link">
 						<svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
 						</svg>
-						test@pilvel.ee
+						angelaleiaru@gmail.com
 					</a>
 				</div>
 			</div>
@@ -73,7 +66,7 @@
 				<svg class="facebook-icon" fill="currentColor" viewBox="0 0 24 24">
 					<path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
 				</svg>
-				<span>Jälgi meid Facebookis</span>
+				<span>{$_('footer.social.facebook')}</span>
 			</a>
 		</div>
 
@@ -83,10 +76,12 @@
 		<!-- Creator Section -->
 		<div class="creator-section">
 			<p class="creator-text">
-				© {currentYear} OÜ. Kõik õigused hetkel veel kaitsmata.
+				{formatCopyright($_('footer.copyright'))}
 			</p>
 			<p class="creator-name">
-				<strong>jfkafk</strong>
+				<a href="https://github.com/jfkafk">
+					<strong>{$_('footer.creator')}</strong>
+				</a>
 			</p>
 		</div>
 	</div>
@@ -94,10 +89,9 @@
 
 <style>
     .footer-wrapper {
-        background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        background: linear-gradient(135deg, #1e293b 0%, #1e293b 100%);
         color: white;
         padding: 3rem 2rem 1.5rem;
-        margin-top: 4rem;
     }
 
     .footer-content {

@@ -7,10 +7,6 @@ export const load: LayoutLoad = async ({ url }) => {
 	// List of public routes that don't require authentication
 	const publicRoutes: string[] = [
 		'/',
-		'/login',
-		'/register',
-		'/about',
-		'/contact'
 	];
 
 	if (browser) {

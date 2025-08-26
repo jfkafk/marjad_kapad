@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "home": "Lõuna-Eesti Märjad Käpad",
+    "about": "Märgadest Käppadest",
+    "join": "Tule Osale",
+    "join_training": "Tule Trenni!",
+    "join_spectator": "Tule Vaatama!",
+    "invite": "Kutsu Meid Külla!",
+    "gallery": "Galerii",
+    "contact": "Kontakt",
+    "support": "Koostöö",
+    "store": "Käpapood"
+  },
+
+  "footer": {
+    "contacts": {
+      "person1_name": "Valvi Väli",
+      "person1_title": "Peatreener",
+      "person2_name": "Toomas Tamm",
+      "person2_title": "Treener",
+      "person3_name": "Angela Leiaru",
+      "person3_title": "Treener"
+    },
+    "social": {
+      "facebook": "Jälgi meid Facebookis"
+    },
+    "copyright": "© {year} OÜ. Kõik õigused hetkel veel kaitsmata.",
+    "creator": "jfkafk"
+  },
+  "common": {
+    "loading": "Laen...",
+    "error": "Viga",
+    "close": "Sulge"
+  }
+}
