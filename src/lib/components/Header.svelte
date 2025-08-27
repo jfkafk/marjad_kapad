@@ -12,7 +12,7 @@
 	}
 </script>
 
-<div class="navbar bg-gradient-to-r from-[#667eea] to-[#764ba2] shadow-sm sticky top-0 z-50 text-white decoration-from-font">
+<div class="navbar bg-gradient-to-r from-[#667eea] to-[#764ba2] shadow-sm lg:sticky lg:top-0 z-50 text-white decoration-from-font">
 	<div class="navbar-start">
 		<div class="dropdown">
 			<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -23,7 +23,7 @@
 			<ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow bg-gradient-to-r from-[#667eea] to-[#764ba2]">
 				<li><a href="/about">{$_('nav.about')}</a></li>
 				<li>
-					<a>{$_('nav.join')}</a>
+					{$_('nav.join')}
 					<ul class="p-2">
 						<li><a href="/join_training">{$_('nav.join_training')}</a></li>
 						<li><a href="/join_spectator">{$_('nav.join_spectator')}</a></li>
@@ -33,6 +33,7 @@
 				<li><a href="/gallery">{$_('nav.gallery')}</a></li>
 				<li><a href="/contact">{$_('nav.contact')}</a></li>
 				<li><a href="/support">{$_('nav.support')}</a></li>
+				<li><a href="/waterwork">{$_('nav.waterwork')}</a></li>
 				<li><a href="/for_member">{$_('nav.member')}</a></li>
 			</ul>
 		</div>
@@ -41,7 +42,7 @@
 		</a>
 	</div>
 
-	<div class="navbar-center hidden lg:flex sticky top-0 z-50">
+	<div class="navbar-center hidden lg:flex lg:sticky lg:top-0 z-50">
 		<ul class="menu menu-horizontal px-1">
 			<li><a href="/about">{$_('nav.about')}</a></li>
 			<li>
@@ -57,6 +58,7 @@
 			<li><a href="/gallery">{$_('nav.gallery')}</a></li>
 			<li><a href="/contact">{$_('nav.contact')}</a></li>
 			<li><a href="/support">{$_('nav.support')}</a></li>
+			<li><a href="/waterwork">{$_('nav.waterwork')}</a></li>
 			<li><a href="/landing">{$_('nav.member')}</a></li>
 		</ul>
 	</div>
@@ -72,14 +74,14 @@
 					<button
 						on:click={() => setLanguage('et')}
 						class="bg-white/20={$locale === 'et'}">
-					🇪🇪 EST
+						🇪🇪 EST
 					</button>
 				</li>
 				<li>
 					<button
 						on:click={() => setLanguage('en')}
 						class="bg-white/20={$locale === 'en'}">
-					🇬🇧 ENG
+						🇬🇧 ENG
 					</button>
 				</li>
 			</ul>
@@ -90,7 +92,7 @@
 			href="/store"
 			class="mr-3 btn bg-gradient-to-r from-[#667eea] to-[#667eea] border-none
          text-white font-semibold shadow-none overflow-visible
-         hover:shadow-[0_0_3px_3px_rgba(102,126,234,0.6)]  hover:scale-105
+         hover:shadow-[0_0_3px_3px_rgba(102,126,234,0.6)] hover:scale-105
          transition-all duration-150">
 			{$_('nav.store')}
 		</a>

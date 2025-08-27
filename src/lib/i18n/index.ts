@@ -16,6 +16,7 @@ register('et', () => Promise.resolve({
 		"contact": "Kontakt",
 		"support": "Koostöö",
 		"store": "Käpapood",
+		"waterwork": "Veepäästest",
 		"member": "Liikmele"
 	},
 	"footer": {
@@ -78,6 +79,7 @@ register('en', () => Promise.resolve({
 		"contact": "Contact",
 		"support": "Partnership",
 		"store": "Paw Shop",
+		"waterwork": "About Waterwork",
 		"member": "For Members"
 	},
 	"footer": {
