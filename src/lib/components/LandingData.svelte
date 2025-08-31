@@ -1,5 +1,6 @@
 <script>
 	import { _ } from '$lib/i18n';
+	import paasteliit from "$lib/assets/päästeliit.svg"
 </script>
 
 <style>
@@ -133,21 +134,21 @@
 		<!-- Left Section -->
 		<div class="section-card">
 			<div class="section-icon">
-				<svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
-					<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-				</svg>
+					<img class="w-24 h-20" src="{paasteliit}" alt="">
 			</div>
 			<h3 class="section-title">{$_('landing.sections.left_title')}</h3>
 			<p class="section-description">
 				{$_('landing.sections.left_description')}
 			</p>
-			<button class="btn btn-primary mt-4">{$_('landing.sections.left_button')}</button>
+			<a href="/support" class="btn btn-primary mt-4">
+				{$_('landing.sections.left_button')}
+			</a>
 		</div>
 
 		<!-- Right Section -->
 		<div class="section-card">
 			<div class="section-icon">
-				<svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+				<svg class="w-24 h-20" fill="currentColor" viewBox="0 0 20 20">
 					<path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
 				</svg>
 			</div>
@@ -155,7 +156,9 @@
 			<p class="section-description">
 				{$_('landing.sections.right_description')}
 			</p>
-			<button class="btn btn-secondary mt-4">{$_('landing.sections.right_button')}</button>
+			<a href="/about" class="btn btn-secondary mt-4" data-sveltekit-preload-data="off">
+				{$_('landing.sections.right_button')}
+			</a>
 		</div>
 	</div>
 

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { _ } from '$lib/i18n';
 	import boatDog from '$lib/assets/boat_dog_back_big.jpg';
 	import smallDog from '$lib/assets/login_side_small_dog.jpg';
 	import banditLaunch from '$lib/assets/bandit_launch_big.jpg';
@@ -14,21 +15,21 @@
 
 	// Simplified slide data - removed massive text blocks
 	const slides = [
-		{ id: 1, image: sittingDog, alt: "Sitting dog", text: "Koer1" },
-		{ id: 2, image: smallDog, alt: "Small dog", text: "Koer2" },
-		{ id: 3, image: boatDog, alt: "Boat dog", text: "Koer3" },
-		{ id: 4, image: banditLaunch, alt: "Bandit launch", text: "Koer4" },
-		{ id: 5, image: man, alt: "Tractorist", text: "Koer5" },
-		{ id: 6, image: paala, alt: "Paala lake", text: "Koer6" },
-		{ id: 7, image: snow, alt: "Snow scene", text: "Koer7" },
-		{ id: 8, image: sittingDog, alt: "Sitting dog", text: "Koer8" },
-		{ id: 9, image: smallDog, alt: "Small dog", text: "Koer9" },
-		{ id: 10, image: boatDog, alt: "Boat dog", text: "Koer10" },
-		{ id: 11, image: banditLaunch, alt: "Bandit launch", text: "Koer11" },
-		{ id: 12, image: man, alt: "Tractorist", text: "Koer12" },
-		{ id: 13, image: paala, alt: "Paala lake", text: "Koer13" },
-		{ id: 14, image: snow, alt: "Snow scene", text: "Koer14" },
-		{ id: 15, image: banditLaunch, alt: "Bandit launch", text: "Koer15" }
+		{ id: 1, image: sittingDog, alt: "Sitting dog", text: $_('about.dogs.text1') },
+		{ id: 2, image: smallDog, alt: "Small dog", text: $_('about.dogs.text2') },
+		{ id: 3, image: boatDog, alt: "Boat dog", text: $_('about.dogs.text3') },
+		{ id: 4, image: banditLaunch, alt: "Bandit launch", text: $_('about.dogs.text4') },
+		{ id: 5, image: man, alt: "Tractorist", text: $_('about.dogs.text5') },
+		{ id: 6, image: paala, alt: "Paala lake", text: $_('about.dogs.text6') },
+		{ id: 7, image: snow, alt: "Snow scene", text: $_('about.dogs.text7') },
+		{ id: 8, image: sittingDog, alt: "Sitting dog", text: $_('about.dogs.text8') },
+		{ id: 9, image: smallDog, alt: "Small dog", text: $_('about.dogs.text9') },
+		{ id: 10, image: boatDog, alt: "Boat dog", text: $_('about.dogs.text10') },
+		{ id: 11, image: banditLaunch, alt: "Bandit launch", text: $_('about.dogs.text11') },
+		{ id: 12, image: man, alt: "Tractorist", text: $_('about.dogs.text12') },
+		{ id: 13, image: paala, alt: "Paala lake", text: $_('about.dogs.text13') },
+		{ id: 14, image: snow, alt: "Snow scene", text: $_('about.dogs.text14') },
+		{ id: 15, image: banditLaunch, alt: "Bandit launch", text: $_('about.dogs.text15') }
 	];
 
 	const totalSlides = slides.length;
@@ -180,10 +181,10 @@
     }
 </style>
 
-<div class="w-full bg-gradient-to-b from-[#ffffff] to-[#667eea] bg-cover bg-center bg-no-repeat py-8">
-	<div class="divider"></div>
+<div class="w-full bg-gradient-to-b from-[#ffffff] to-[#667eea] bg-cover bg-center bg-no-repeat py-8" id="dogs">
+	<!-- <div class="divider"></div> -->
 	<div class="header-centre">
-		Kes on me Märjad-Käpad?
+		{$_('about.dogs.title')}
 	</div>
 
 	<div class="w-full py-4 sm:py-6 lg:py-8">

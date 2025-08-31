@@ -8,12 +8,14 @@
 	import AboutWhatWeDo from '$lib/components/AboutWhatWeDo.svelte';
 	import AboutWhyWeDo from '$lib/components/AboutWhyWeDo.svelte';
 	import AboutDogs from '$lib/components/AboutDogs.svelte';
+	import AboutTrainers from '$lib/components/AboutTrainers.svelte';
 </script>
 
 <div>
 	<Header />
 	<AboutBackground />
 	<AboutUs />
+	<AboutTrainers />
 	<AboutDogs />
 	<AboutWhatWeDo />
 	<AboutWhatWeTrain />

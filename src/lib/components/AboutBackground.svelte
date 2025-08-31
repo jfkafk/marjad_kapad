@@ -4,6 +4,7 @@
 	import euro from '$lib/assets/euro.webp'
 	import tractor from '$lib/assets/traktor.jpg'
 	import man from '$lib/assets/tractorist.png'
+	import { _ } from '$lib/i18n';
 </script>
 
 <style>
@@ -11,9 +12,9 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 100vw;
+        width: 100%;
         height: 100vh;
-        z-index: -10; /* Even more negative */
+        z-index: -10;
     }
 
     .landing-background-container img {
@@ -27,7 +28,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         z-index: -5; /* Between background and content */
         background:
@@ -75,7 +76,7 @@
         padding: 2rem;
         /* Space for header */
         /* Space for footer */
-        margin: 3rem 2rem;
+        margin: 1rem 2rem;
         background: rgba(255, 255, 255, 0.0); /* Very subtle background */
         border-radius: 1rem;
     }
@@ -198,6 +199,7 @@
     }
 
     .header-centre {
+				margin-top: 1rem;
         font-size: 3rem;
         font-weight: 700;
         text-align: center;
@@ -218,8 +220,8 @@
 <!-- Gradient overlay -->
 <div class="gradient-overlay"></div>
 
-<div class="header-centre">
-	Kust me tuleme?
+<div class="header-centre" id="history">
+	{$_('about.history.header')}
 </div>
 
 <!-- Scrollable content -->
@@ -249,14 +251,9 @@
 						</div>
 						<div class="timeline-start mb-10 md:text-end timeline-item-content">
 							<time class="font-mono italic">1910</time>
-							<div class="text-lg font-black">Elva VTÜ</div>
+							<div class="text-lg font-black">{$_('about.history.title1')}</div>
 							<img src={yeah} alt="Description" class="timeline-thumbnail" />
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua.
+							{$_('about.history.long1')}
 						</div>
 						<hr />
 					</li>
@@ -278,14 +275,9 @@
 						</div>
 						<div class="timeline-end md:mb-10 timeline-item-content">
 							<time class="font-mono italic">1923</time>
-							<div class="text-lg font-black">Elva VTÜ esimene traktor</div>
+							<div class="text-lg font-black">{$_('about.history.title2')}</div>
 							<img src={tractor} alt="Description" class="timeline-thumbnail" />
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua.
+							{$_('about.history.long2')}
 						</div>
 						<hr />
 					</li>
@@ -307,14 +299,9 @@
 						</div>
 						<div class="timeline-start mb-10 md:text-end timeline-item-content">
 							<time class="font-mono italic">1964</time>
-							<div class="text-lg font-black">Elva VTÜ esimene traktorijuht</div>
+							<div class="text-lg font-black">{$_('about.history.title3')}</div>
 							<img src={man} alt="Description" class="timeline-thumbnail" />
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua.
+							{$_('about.history.long3')}
 						</div>
 						<hr />
 					</li>
@@ -336,14 +323,9 @@
 						</div>
 						<div class="timeline-end md:mb-10 timeline-item-content">
 							<time class="font-mono italic">1991</time>
-							<div class="text-lg font-black">Elva VTÜ yeah!</div>
+							<div class="text-lg font-black">{$_('about.history.title4')}</div>
 							<img src={yeah} alt="Description" class="timeline-thumbnail" />
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua.
+							{$_('about.history.long4')}
 						</div>
 						<hr />
 					</li>
@@ -365,14 +347,9 @@
 						</div>
 						<div class="timeline-start md:mb-10 timeline-item-content">
 							<time class="font-mono italic">1999</time>
-							<div class="text-lg font-black">Elva VTÜ yeah! teist korda</div>
+							<div class="text-lg font-black">{$_('about.history.title5')}</div>
 							<img src={yeah} alt="Description" class="timeline-thumbnail" />
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua.
+							{$_('about.history.long5')}
 						</div>
 						<hr />
 					</li>
@@ -394,14 +371,9 @@
 						</div>
 						<div class="timeline-end md:mb-10 timeline-item-content">
 							<time class="font-mono italic">2003</time>
-							<div class="text-lg font-black">Karl</div>
+							<div class="text-lg font-black">{$_('about.history.title6')}</div>
 							<img src={man} alt="Description" class="timeline-thumbnail" />
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua.
+							{$_('about.history.long6')}
 						</div>
 						<hr />
 					</li>
@@ -423,14 +395,9 @@
 						</div>
 						<div class="timeline-start md:mb-10 timeline-item-content">
 							<time class="font-mono italic">2009</time>
-							<div class="text-lg font-black">Elva VTÜ yeah! kolmas tulemine</div>
+							<div class="text-lg font-black">{$_('about.history.title7')}</div>
 							<img src={yeah} alt="Description" class="timeline-thumbnail" />
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua.
+							{$_('about.history.long7')}
 						</div>
 						<hr />
 					</li>
@@ -452,14 +419,9 @@
 						</div>
 						<div class="timeline-end md:mb-10 timeline-item-content">
 							<time class="font-mono italic">2010</time>
-							<div class="text-lg font-black">Märjad-Käpad</div>
+							<div class="text-lg font-black">{$_('about.history.title8')}</div>
 							<img src={yeah} alt="Description" class="timeline-thumbnail" />
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua.
+							{$_('about.history.long8')}
 						</div>
 						<hr />
 					</li>
@@ -481,14 +443,9 @@
 						</div>
 						<div class="timeline-start mb-10 md:text-end timeline-item-content">
 							<time class="font-mono italic">2011</time>
-							<div class="text-lg font-black">Eesti võttis kasutusele euro</div>
+							<div class="text-lg font-black">{$_('about.history.title9')}</div>
 							<img src={euro} alt="Description" class="timeline-thumbnail" />
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua.
+							{$_('about.history.long9')}
 						</div>
 					</li>
 				</ul>

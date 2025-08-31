@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { _ } from '$lib/i18n';
 	import paala from "$lib/assets/paala_järv.jpg"
 	import raudna from "$lib/assets/raudna_järv.webp"
 	import arbi from "$lib/assets/arbi_järv.jpg"
@@ -72,29 +73,25 @@
         background-clip: text;
         text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-    /* Divider */
     .divider {
         height: 1px;
         background: linear-gradient(90deg, transparent, #475569, transparent);
         margin: 2rem 0;
+        position: relative;
+        z-index: 10;
     }
 </style>
 
-<div class="divider"></div>
-<div class="header-centre">
-	Kus me harjutame?
+<!-- <div class="divider"></div> -->
+<div class="header-centre" id="location">
+	{$_('about.locations.title')}
 </div>
 
 <div class="comparison-container">
 	<div class="text-content">
-		<h3 class="comparison-title">Viljandimaal- Raudna- ja Paala järv</h3>
+		<h3 class="comparison-title">{$_('about.locations.subheader1')}</h3>
 		<p class="comparison-description">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-			et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-			et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-			et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-			et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-			et dolore magna aliqua.
+			{$_('about.locations.text1')}
 		</p>
 	</div>
 	<div class="comparison-wrapper">
@@ -127,14 +124,9 @@
 		</figure>
 	</div>
 	<div class="text-content">
-		<h3 class="comparison-title">Tartumaal- Arbi Järv ja Nõo Paisjärv</h3>
+		<h3 class="comparison-title">{$_('about.locations.subheader2')}</h3>
 		<p class="comparison-description">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-			et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-			et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-			et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-			et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-			et dolore magna aliqua.
+			{$_('about.locations.text2')}
 		</p>
 	</div>
 </div>

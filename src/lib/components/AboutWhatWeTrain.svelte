@@ -1,97 +1,79 @@
 <script lang="ts">
+	import { _ } from '$lib/i18n';
+
 	let activeSection = 'principles';
 
 	const trainingPrinciples = [
 		{
 			icon: '🎯',
-			title: 'Positiivne Treening',
-			description: 'Kasutame ainult positiivseid meetodeid ja preemiasüsteemi. Iga edusamm saab tunnustatud.',
-			details: 'Meie lähenemisviis põhineb usalduse ja lugupidamise ehitamisel koera ja omaniku vahel.'
+			title: $_('about.training.principles.items.positive.title'),
+			description: $_('about.training.principles.items.positive.description'),
+			details: $_('about.training.principles.items.positive.details')
 		},
 		{
 			icon: '🏊‍♀️',
-			title: 'Veepõhine Treening',
-			description: 'Märtsist oktoobrini toimub põhiline treening vees. Sügav- ja madalvees harjutused.',
-			details: 'Veesport tugevdab kõiki lihasgrupppe ja on liigestele sõbralik alternatiiv maatreeninguile.'
+			title: $_('about.training.principles.items.water.title'),
+			description: $_('about.training.principles.items.water.description'),
+			details: $_('about.training.principles.items.water.details')
 		},
 		{
 			icon: '💪',
-			title: 'Aastaringne Vormisolek',
-			description: 'Talvel hoiame vormi kuivatreeningute ja siseruumide kasutamisega.',
-			details: 'Füüsiline aktiivsus on oluline terve aasta vältel - kohandame meetodeid vastavalt hooajale.'
+			title: $_('about.training.principles.items.yearRound.title'),
+			description: $_('about.training.principles.items.yearRound.description'),
+			details: $_('about.training.principles.items.yearRound.details')
 		},
 		{
 			icon: '👥',
-			title: 'Individuaalne Lähenemine',
-			description: 'Iga koer on erinev. Kohandame treeninguid vastavalt iseloomule ja võimetele.',
-			details: 'Arvestame koera vanust, füüsilist seisundit, iseloomu ja eelnevat kogemust.'
+			title: $_('about.training.principles.items.individual.title'),
+			description: $_('about.training.principles.items.individual.description'),
+			details: $_('about.training.principles.items.individual.details')
 		},
 		{
 			icon: '📈',
-			title: 'Järkjärguline Areng',
-			description: 'Ehitame oskused üles sammsammu haaval. Ei torma ega sunnita.',
-			details: 'Iga uus oskus tugineb eelnevalt omandatud teadmistele ja kogemusele.'
+			title: $_('about.training.principles.items.gradual.title'),
+			description: $_('about.training.principles.items.gradual.description'),
+			details: $_('about.training.principles.items.gradual.details')
 		},
 		{
 			icon: '🏆',
-			title: 'Lõbus Õppimine',
-			description: 'Treening peab olema rõõmus ja kaasahaarav nii koerale kui omanikule.',
-			details: 'Mänguline lähenemisviis aitab säilitada motivatsiooni ja huvi õppimise vastu.'
+			title: $_('about.training.principles.items.fun.title'),
+			description: $_('about.training.principles.items.fun.description'),
+			details: $_('about.training.principles.items.fun.details')
 		}
 	];
 
 	const seasonalSchedule = [
 		{
-			season: 'Kevad',
-			months: 'Märts - Mai',
+			season: $_('about.training.seasons.spring.season'),
+			months: $_('about.training.seasons.spring.months'),
 			icon: '🌸',
 			color: 'from-green-400 to-blue-500',
-			activities: [
-				'Veesessiooni alustamine',
-				'Ujumistehnika taastamine',
-				'Temperatuuriga harjumine',
-				'Põhilised veeskillid'
-			],
-			description: 'Kevadel alustame ettevaatlikult veetreeninguga, kui temperatuur lubab.'
+			activities: $_('about.training.seasons.spring.activities'),
+			description: $_('about.training.seasons.spring.description')
 		},
 		{
-			season: 'Suvi',
-			months: 'Juuni - August',
+			season: $_('about.training.seasons.summer.season'),
+			months: $_('about.training.seasons.summer.months'),
 			icon: '☀️',
 			color: 'from-yellow-400 to-orange-500',
-			activities: [
-				'Intensiivsed ujumissessioonid',
-				'Sügavavee treening',
-				'Tehnilised harjutused',
-				'Vastupidavuse ehitamine'
-			],
-			description: 'Suvel toimub kõige intensiivsem veesport koos täieliku tehnikaarendusega.'
+			activities: $_('about.training.seasons.summer.activities'),
+			description: $_('about.training.seasons.summer.description')
 		},
 		{
-			season: 'Sügis',
-			months: 'September - Oktoober',
+			season: $_('about.training.seasons.autumn.season'),
+			months: $_('about.training.seasons.autumn.months'),
 			icon: '🍂',
 			color: 'from-orange-400 to-red-500',
-			activities: [
-				'Vormi säilitamine',
-				'Tehniliste oskuste lihvimine',
-				'Võistluste ettevalmistus',
-				'Hooaja kokkuvõte'
-			],
-			description: 'Sügis on ideaalne aeg võistlusteks ja saavutuste hindamiseks.'
+			activities: $_('about.training.seasons.autumn.activities'),
+			description: $_('about.training.seasons.autumn.description')
 		},
 		{
-			season: 'Talv',
-			months: 'November - Veebruar',
+			season: $_('about.training.seasons.winter.season'),
+			months: $_('about.training.seasons.winter.months'),
 			icon: '❄️',
 			color: 'from-blue-400 to-purple-500',
-			activities: [
-				'Sisekonna treening',
-				'Jõutreening ja stretching',
-				'Tehnikaalane ettevalmistus',
-				'Teoreetiline õpe'
-			],
-			description: 'Talvel keskendume vormi hoidmisele ja järgmise hooaja ettevalmistamisele.'
+			activities: $_('about.training.seasons.winter.activities'),
+			description: $_('about.training.seasons.winter.description')
 		}
 	];
 
@@ -116,6 +98,8 @@
         height: 1px;
         background: linear-gradient(90deg, transparent, #475569, transparent);
         margin: 2rem 0;
+        position: relative;
+        z-index: 10;
     }
 
     .principle-card {
@@ -165,10 +149,10 @@
     }
 </style>
 
-<div class="w-full bg-gradient-to-b from-[#764ba2] to-[#ffffff] bg-cover bg-center bg-no-repeat py-8">
-	<div class="divider"></div>
+<div class="w-full bg-gradient-to-b from-[#764ba2] to-[#ffffff] bg-cover bg-center bg-no-repeat py-8" id="whatTrain">
+	<!-- <div class="divider"></div> -->
 	<div class="header-centre">
-		Kuidas me treenime?
+		{$_('about.training.title')}
 	</div>
 
 	<!-- Tab Navigation -->
@@ -177,26 +161,25 @@
 			class="tab-button px-6 py-3 rounded-full border border-white/30 text-white font-semibold {activeSection === 'principles' ? 'active' : ''}"
 			on:click={() => setActiveSection('principles')}
 		>
-			🎯 Põhimõtted
+			🎯 {$_('about.training.tabs.principles')}
 		</button>
 		<button
 			class="tab-button px-6 py-3 rounded-full border border-white/30 text-white font-semibold {activeSection === 'seasons' ? 'active' : ''}"
 			on:click={() => setActiveSection('seasons')}
 		>
-			📅 Hooajad
+			📅 {$_('about.training.tabs.seasons')}
 		</button>
 	</div>
 
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+	<div class="max-w-500 mx-auto px-4 sm:px-6 lg:px-8">
 
 		{#if activeSection === 'principles'}
 			<!-- Training Principles Section -->
 			<div class="mb-12">
 				<div class="text-center mb-12">
-					<h2 class="text-4xl font-bold gradient-text mb">Meie Treeningu Põhimõtted</h2>
+					<h2 class="text-4xl font-bold gradient-text mb">{$_('about.training.principles.sectionTitle')}</h2>
 					<p class="text-lg text-slate-700 max-w-3xl mx-auto">
-						Usume, et iga koer võib õppida ja areneda, kui kasutada õigeid meetodeid ja lähenemist.
-						Meie filosoofia põhineb positiivsuse, kannatlikkuse ja individuaalse lähenemise kolmel sambaal.
+						{$_('about.training.principles.sectionSubtitle')}
 					</p>
 				</div>
 
@@ -213,35 +196,23 @@
 
 				<!-- Key Benefits -->
 				<div class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl p-8">
-					<h3 class="text-2xl font-bold gradient-text mb-6 text-center">A miks nii täitsa?</h3>
+					<h3 class="text-2xl font-bold gradient-text mb-6 text-center">{$_('about.training.principles.benefits.title')}</h3>
 					<div class="grid md:grid-cols-2 gap-6">
 						<div class="space-y-4">
-							<div class="flex items-center space-x-3">
-								<div class="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-								<span class="text-slate-700">Stress-free</span>
-							</div>
-							<div class="flex items-center space-x-3">
-								<div class="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-								<span class="text-slate-700">Vegan</span>
-							</div>
-							<div class="flex items-center space-x-3">
-								<div class="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-								<span class="text-slate-700">Tugevam side omaniku ja koera vahel</span>
-							</div>
+							{#each $_('about.training.principles.benefits.list').slice(0, 3) as benefit}
+								<div class="flex items-center space-x-3">
+									<div class="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+									<span class="text-slate-700">{benefit}</span>
+								</div>
+							{/each}
 						</div>
 						<div class="space-y-4">
-							<div class="flex items-center space-x-3">
-								<div class="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-								<span class="text-slate-700">Igas olukorras harjunud</span>
-							</div>
-							<div class="flex items-center space-x-3">
-								<div class="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-								<span class="text-slate-700">Lõbus ja kaasahaarav protsess</span>
-							</div>
-							<div class="flex items-center space-x-3">
-								<div class="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-								<span class="text-slate-700">pla-pla-pla...</span>
-							</div>
+							{#each $_('about.training.principles.benefits.list').slice(3) as benefit}
+								<div class="flex items-center space-x-3">
+									<div class="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+									<span class="text-slate-700">{benefit}</span>
+								</div>
+							{/each}
 						</div>
 					</div>
 				</div>
@@ -252,10 +223,9 @@
 			<!-- Seasonal Training Section -->
 			<div class="mb-12">
 				<div class="text-center mb-12">
-					<h2 class="text-4xl font-bold gradient-text mb-4">Hooajaline Treeningu Kalender</h2>
+					<h2 class="text-4xl font-bold gradient-text mb-4">{$_('about.training.seasons.sectionTitle')}</h2>
 					<p class="text-lg text-slate-700 max-w-3xl mx-auto">
-						Meie treening järgib looduslike hooaegade rütmi. Märtsist oktoobrini toimub põhiline treening vees,
-						kuid hoiame oma neljajalgseid sõpru vormi kogu aasta vältel.
+						{$_('about.training.seasons.sectionSubtitle')}
 					</p>
 				</div>
 
@@ -282,27 +252,26 @@
 				<!-- Year-Round Fitness Focus -->
 				<div class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl p-8 mb-8">
 					<div class="text-center">
-						<h3 class="text-2xl font-bold gradient-text mb-4">💪 Aastaringne Vormisolek</h3>
+						<h3 class="text-2xl font-bold gradient-text mb-4">💪 {$_('about.training.seasons.yearRoundTitle')}</h3>
 						<p class="text-slate-700 mb-6 max-w-2xl mx-auto">
-							Kuigi veehooaeg kestab märtsist oktoobrini, jätkame treeninguid terve aasta vältel.
-							Talveperioodil kasutame sisekeskkondi ja alternatiivseid meetodeid.
+							{$_('about.training.seasons.yearRoundDescription')}
 						</p>
 
 						<div class="grid md:grid-cols-3 gap-6 mt-8">
 							<div class="text-center">
 								<div class="text-3xl mb-3">🏊‍♀️</div>
-								<h4 class="font-semibold gradient-text mb-2">Veehooaeg</h4>
-								<p class="text-sm text-slate-600">Märts - Oktoober<br>Intensiivne veesport ja ujumisharjutused</p>
+								<h4 class="font-semibold gradient-text mb-2">{$_('about.training.seasons.periods.water.title')}</h4>
+								<p class="text-sm text-slate-600">{$_('about.training.seasons.periods.water.time')}<br>{$_('about.training.seasons.periods.water.description')}</p>
 							</div>
 							<div class="text-center">
 								<div class="text-3xl mb-3">🏠</div>
-								<h4 class="font-semibold gradient-text mb-2">Siseperiood</h4>
-								<p class="text-sm text-slate-600">November - Veebruar<br>Sisehal, jõusaal, kuivtreening</p>
+								<h4 class="font-semibold gradient-text mb-2">{$_('about.training.seasons.periods.indoor.title')}</h4>
+								<p class="text-sm text-slate-600">{$_('about.training.seasons.periods.indoor.time')}<br>{$_('about.training.seasons.periods.indoor.description')}</p>
 							</div>
 							<div class="text-center">
 								<div class="text-3xl mb-3">🎯</div>
-								<h4 class="font-semibold gradient-text mb-2">Individuaalne</h4>
-								<p class="text-sm text-slate-600">Aastaringselt<br>Personaalne treening ja nõustamine</p>
+								<h4 class="font-semibold gradient-text mb-2">{$_('about.training.seasons.periods.individual.title')}</h4>
+								<p class="text-sm text-slate-600">{$_('about.training.seasons.periods.individual.time')}<br>{$_('about.training.seasons.periods.individual.description')}</p>
 							</div>
 						</div>
 					</div>
@@ -310,7 +279,7 @@
 
 				<!-- Training Intensity Chart -->
 				<div class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl p-8">
-					<h3 class="text-2xl font-bold gradient-text mb-6 text-center">Treeningu Intensiivsus Aasta Lõikes</h3>
+					<h3 class="text-2xl font-bold gradient-text mb-6 text-center">{$_('about.training.seasons.intensityTitle')}</h3>
 					<div class="flex items-end justify-center space-x-2 h-32 mb-4">
 						<div class="bg-gradient-to-t from-blue-500 to-blue-300 w-8 h-12 rounded-t"></div>
 						<div class="bg-gradient-to-t from-green-500 to-green-300 w-8 h-20 rounded-t"></div>
@@ -320,12 +289,9 @@
 						<div class="bg-gradient-to-t from-purple-500 to-purple-300 w-8 h-16 rounded-t"></div>
 					</div>
 					<div class="flex justify-center space-x-6 text-xs text-slate-600">
-						<span>Talv</span>
-						<span>Kevad</span>
-						<span>Suvi</span>
-						<span>Sügis</span>
-						<span>Hilissügis</span>
-						<span>Talv</span>
+						{#each $_('about.training.seasons.intensityLabels') as label}
+							<span>{label}</span>
+						{/each}
 					</div>
 				</div>
 			</div>

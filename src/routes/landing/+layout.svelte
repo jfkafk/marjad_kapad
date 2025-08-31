@@ -3,15 +3,16 @@
 	import LandingBackground from '$lib/components/LandingBackground.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import LandingData from '$lib/components/LandingData.svelte';
-	import NewsSection from '$lib/components/NewsSection.svelte';
-	import Carousel from '$lib/components/Carousel.svelte';
+	import LandingNewsSection from '$lib/components/LandingNewsSection.svelte';
+	import LandingCarousel from '$lib/components/LandingCarousel.svelte';
+	import LandingFacebookReel from '$lib/components/LandingFacebookReel.svelte';
 </script>
 
 <div>
 	<Header />
 	<LandingBackground />
 	<LandingData />
-	<NewsSection />
-	<Carousel />
+	<LandingNewsSection />
+	<LandingCarousel />
 	<Footer />
 </div>

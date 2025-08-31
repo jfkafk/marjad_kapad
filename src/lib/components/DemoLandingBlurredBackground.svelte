@@ -1,4 +1,3 @@
-<!-- src/lib/components/BlurredBackground.svelte -->
 <script lang="ts">
 	interface Props {
 		imageUrl: string;

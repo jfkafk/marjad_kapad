@@ -1,9 +1,9 @@
 <script lang="ts">
 	import "../app.css";
 	import '$lib/i18n';
-	import ComingSoon from '$lib/components/ComingSoon.svelte';
-	import OpenLoginModal from '$lib/components/OpenLoginModal.svelte';
+	import DemoLandingComingSoon from '$lib/components/DemoLandingComingSoon.svelte';
+	import DemoLandingOpenLoginModal from '$lib/components/DemoLandingOpenLoginModal.svelte';
 </script>
 
-<OpenLoginModal/>
-<ComingSoon/>
+<DemoLandingOpenLoginModal/>
+<DemoLandingComingSoon/>

@@ -1,13 +1,15 @@
 <script lang="ts">
+	import { _ } from '$lib/i18n';
+
 	export let mediaItems: Array<{
 		id: number;
 		type: 'video' | 'image';
 		src: string;
-		poster?: string; // For videos - thumbnail image
+		poster?: string;
 		alt: string;
 		title: string;
 		description: string;
-		duration?: string; // For videos - e.g., "2:30"
+		duration?: string;
 	}> = [
 		{
 			id: 1,
@@ -15,8 +17,8 @@
 			src: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
 			poster: 'https://images.unsplash.com/photo-1560743173-567a3b5658b1?w=600&h=400&fit=crop',
 			alt: 'Koerte trenni video',
-			title: 'Mingi video millestki',
-			description: 'Ja suvaline pikk tekst kah siia mida siin näha on. Kui midagi pole näha siis miskit on ikka näha.',
+			title: $_('about.gallery.items.item1.title'),
+			description: $_('about.gallery.items.item1.description'),
 			duration: '3:45'
 		},
 		{
@@ -24,8 +26,8 @@
 			type: 'image',
 			src: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&h=400&fit=crop',
 			alt: 'Kutsikad mängimas',
-			title: 'Mingi pilt millestki',
-			description: 'Ja suvaline pikk tekst kah siia mida siin näha on. Kui midagi pole näha siis miskit on ikka näha.',
+			title: $_('about.gallery.items.item2.title'),
+			description: $_('about.gallery.items.item2.description'),
 		},
 		{
 			id: 3,
@@ -33,8 +35,8 @@
 			src: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
 			poster: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=400&fit=crop',
 			alt: 'Koerte mänguväljak video',
-			title: 'Mingi video millestki',
-			description: 'Ja suvaline pikk tekst kah siia mida siin näha on. Kui midagi pole näha siis miskit on ikka näha.',
+			title: $_('about.gallery.items.item3.title'),
+			description: $_('about.gallery.items.item3.description'),
 			duration: '2:15'
 		},
 		{
@@ -42,8 +44,8 @@
 			type: 'image',
 			src: 'https://images.unsplash.com/photo-1560743173-567a3b5658b1?w=600&h=400&fit=crop',
 			alt: 'Koera hooldus',
-			title: 'Mingi pilt millestki',
-			description: 'Ja suvaline pikk tekst kah siia mida siin näha on. Kui midagi pole näha siis miskit on ikka näha.',
+			title: $_('about.gallery.items.item4.title'),
+			description: $_('about.gallery.items.item4.description'),
 		},
 		{
 			id: 5,
@@ -51,8 +53,8 @@
 			src: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
 			poster: 'https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=600&h=400&fit=crop',
 			alt: 'Veterinaarabi video',
-			title: 'Mingi video millestki',
-			description: 'Ja suvaline pikk tekst kah siia mida siin näha on. Kui midagi pole näha siis miskit on ikka näha.',
+			title: $_('about.gallery.items.item5.title'),
+			description: $_('about.gallery.items.item5.description'),
 			duration: '4:20'
 		}
 	];
@@ -74,14 +76,12 @@
 		currentVideo = null;
 		document.body.style.overflow = '';
 
-		// Pause video when closing modal
 		if (modalVideoElement) {
 			modalVideoElement.pause();
 			modalVideoElement.currentTime = 0;
 		}
 	}
 
-	// Close modal on escape key
 	function handleKeydown(event: KeyboardEvent) {
 		if (event.key === 'Escape' && modalOpen) {
 			closeModal();
@@ -90,18 +90,13 @@
 </script>
 
 <style>
+    /* ... keep all your existing styles ... */
     .main-container {
         width: 100%;
-        min-height: 100vh;
+        min-height: 30vh;
         position: relative;
         overflow: hidden;
-
-        /* full gradient background directly here */
-        background: linear-gradient(
-                to bottom,
-                #667eea,
-                #764ba2
-        );
+        background: linear-gradient(to bottom, #667eea, #764ba2);
     }
 
     .main-container::before {
@@ -113,13 +108,10 @@
                 radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
                 radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
         pointer-events: none;
-        z-index: 0; /* keep this under everything */
+        z-index: 0;
     }
 
-    /* put content above background */
-    .header-section,
-    .gallery-container,
-    .content-wrapper {
+    .header-section, .gallery-container, .content-wrapper {
         position: relative;
         z-index: 1;
     }
@@ -139,12 +131,15 @@
         height: 1px;
         background: linear-gradient(90deg, transparent, #475569, transparent);
         margin: 2rem 0;
+        position: relative;
+        z-index: 10;
     }
 
     .gallery-container {
         width: 100%;
         padding: 3rem 0;
     }
+
     .content-wrapper {
         max-width: 1400px;
         margin: 0 auto;
@@ -376,11 +371,11 @@
     }
 </style>
 
-<div class="main-container">
+<div class="main-container" id="whatDo">
 	<div class="header-section">
-		<div class="divider"></div>
+		<!-- <div class="divider"></div> -->
 		<div class="header-centre">
-			Mida me teeme?
+			{$_('about.gallery.title')}
 		</div>
 	</div>
 
@@ -407,7 +402,7 @@
 								{#if item.duration}
 									<div class="video-duration">{item.duration}</div>
 								{/if}
-								<div class="media-type-badge">Video</div>
+								<div class="media-type-badge">{$_('about.gallery.mediaTypes.video')}</div>
 							{:else}
 								<img
 									class="media-content"
@@ -415,7 +410,7 @@
 									alt={item.alt}
 									loading="lazy"
 								/>
-								<div class="media-type-badge image">Foto</div>
+								<div class="media-type-badge image">{$_('about.gallery.mediaTypes.image')}</div>
 							{/if}
 						</div>
 

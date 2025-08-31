@@ -1,53 +1,55 @@
 <script lang="ts">
+	import { _ } from '$lib/i18n';
+
 	let hoveredCard: number | null = null;
 
 	const motivations = [
 		{
 			id: 1,
 			image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=800&h=600&fit=crop',
-			title: 'Et päästa elusid',
-			subtitle: 'Nii on nagu elu käib.',
-			description: 'Avot midagi läilat siia ka. Pean veel kirjutama, siia saab päris palju kirjutada. Vajan teie abi, et kirjutada midagi siia.',
+			title: $_('about.motivation.cards.card1.title'),
+			subtitle: $_('about.motivation.cards.card1.subtitle'),
+			description: $_('about.motivation.cards.card1.description'),
 			icon: '❤️'
 		},
 		{
 			id: 2,
 			image: 'https://images.unsplash.com/photo-1560743173-567a3b5658b1?w=800&h=600&fit=crop',
-			title: 'Tervise Nimel',
-			subtitle: 'Füüsiline ja vaimne heaolu',
-			description: 'Veesport on liigestele sõbralik ja pakub terviklikku treeningu. Terve koer on õnnelik koer - see on meie eesmärk.',
+			title: $_('about.motivation.cards.card2.title'),
+			subtitle: $_('about.motivation.cards.card2.subtitle'),
+			description: $_('about.motivation.cards.card2.description'),
 			icon: '🏥'
 		},
 		{
 			id: 3,
 			image: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&h=600&fit=crop',
-			title: 'Kogukonna Pärast',
-			subtitle: 'Koos me oleme tugevamad',
-			description: 'Loome kogukonna, kus inimesed ja koerad saavad koos õppida, mängida ja kasvada. Igaüks leiab siin oma koha.',
+			title: $_('about.motivation.cards.card3.title'),
+			subtitle: $_('about.motivation.cards.card3.subtitle'),
+			description: $_('about.motivation.cards.card3.description'),
 			icon: '👥'
 		},
 		{
 			id: 4,
 			image: 'https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=800&h=600&fit=crop',
-			title: 'Tuleviku Nimel',
-			subtitle: 'Paremad homsed päevad',
-			description: 'Iga treenitud koer on samm parema tuleviku poole. Me investeerime aega täna, et homme oleks õnnelikum.',
+			title: $_('about.motivation.cards.card4.title'),
+			subtitle: $_('about.motivation.cards.card4.subtitle'),
+			description: $_('about.motivation.cards.card4.description'),
 			icon: '🌟'
 		},
 		{
 			id: 5,
 			image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=800&h=600&fit=crop',
-			title: 'Jällegi minig hea põhjus',
-			subtitle: 'See on meie elukutse',
-			description: 'Me ei tee seda ainult töö pärast - see on meie kirg. Iga edukas treening, iga õnnelik koer täidab meie südame rõõmuga.',
+			title: $_('about.motivation.cards.card5.title'),
+			subtitle: $_('about.motivation.cards.card5.subtitle'),
+			description: $_('about.motivation.cards.card5.description'),
 			icon: '🔥'
 		},
 		{
 			id: 6,
 			image: 'https://images.unsplash.com/photo-1560743173-567a3b5658b1?w=800&h=600&fit=crop',
-			title: 'Neid kaste võiks olla 3 v 6.',
-			subtitle: 'Iga koer saab paremaks',
-			description: 'Mingi muu arvu kastidega saame ka hakkama, aga nimodi on kõige parem. Genereerige tekste nüüd!.',
+			title: $_('about.motivation.cards.card6.title'),
+			subtitle: $_('about.motivation.cards.card6.subtitle'),
+			description: $_('about.motivation.cards.card6.description'),
 			icon: '🦋'
 		}
 	];
@@ -77,6 +79,8 @@
         height: 1px;
         background: linear-gradient(90deg, transparent, #475569, transparent);
         margin: 2rem 0;
+        position: relative;
+        z-index: 10;
     }
 
     .motivation-card {
@@ -195,23 +199,22 @@
 	<!-- Animated Background Pattern -->
 	<div class="absolute inset-0 grid-pattern opacity-20"></div>
 
-	<div class="divider"></div>
-	<div class="header-centre relative z-10">
-		Miks me seda teeme?
+	<!-- <div class="divider"></div> -->
+	<div class="header-centre relative z-10" id="why">
+		{$_('about.motivation.title')}
 	</div>
 
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 relative z-10">
 		<!-- Introduction Text -->
 		<div class="text-center mb-16">
 			<p class="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-				See värk ei ole mingi niisama värk. See on päris värk. Teeme eksameid. Teeme seda teist ja kolmandat
-				nende placeholderite kirjutamine on maru keeruline, keerulisem kui terve selle muu värgi tegemine.
+				{$_('about.motivation.subtitle')}
 			</p>
 		</div>
 
 		<!-- Motivations Grid -->
 		<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-			{#each motivations as motivation, index (motivation.id)}
+			{#each motivations as motivation (motivation.id)}
 				<div
 					class="motivation-card stagger-animation bg-white/10 rounded-2xl overflow-hidden relative group cursor-pointer"
 					on:mouseenter={() => handleMouseEnter(motivation.id)}
@@ -255,24 +258,17 @@
 		<!-- Bottom Call to Action -->
 		<div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 text-center">
 			<div class="max-w-3xl mx-auto">
-				<h3 class="text-2xl font-bold text-gradient mb-4">Jällegi liitu ja liitu.</h3>
+				<h3 class="text-2xl font-bold text-gradient mb-4">{$_('about.motivation.callToAction.title')}</h3>
 				<p class="text-white/90 mb-6 leading-relaxed">
-					Ja vot nii ongi. Midagi tuleks siia ka kribada. On ideid kellelgi? Tahaks nagu hullult teksti genereerida aga ei
-					viitsi igale poole seda lorem-ipsumit ka toppida.
+					{$_('about.motivation.callToAction.description')}
 				</p>
 				<div class="flex flex-wrap justify-center gap-4 text-sm text-white/80">
-					<div class="flex items-center space-x-2">
-						<div class="w-2 h-2 bg-blue-400 rounded-full"></div>
-						<span>Professionaalne lähenemisviis</span>
-					</div>
-					<div class="flex items-center space-x-2">
-						<div class="w-2 h-2 bg-purple-400 rounded-full"></div>
-						<span>Südamega tehtud töö</span>
-					</div>
-					<div class="flex items-center space-x-2">
-						<div class="w-2 h-2 bg-pink-400 rounded-full"></div>
-						<span>Pühendumus igale koerale</span>
-					</div>
+					{#each $_('about.motivation.callToAction.features') as feature (feature)}
+						<div class="flex items-center space-x-2">
+							<div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+							<span>{feature}</span>
+						</div>
+					{/each}
 				</div>
 			</div>
 		</div>
@@ -281,19 +277,19 @@
 		<div class="grid md:grid-cols-4 gap-6 mt-12">
 			<div class="text-center">
 				<div class="text-3xl font-bold text-gradient mb-2">20+</div>
-				<div class="text-white/70 text-sm">Treenitud koera</div>
+				<div class="text-white/70 text-sm">{$_('about.motivation.stats.dogs')}</div>
 			</div>
 			<div class="text-center">
 				<div class="text-3xl font-bold text-gradient mb-2">15</div>
-				<div class="text-white/70 text-sm">Aastat kogemust</div>
+				<div class="text-white/70 text-sm">{$_('about.motivation.stats.experience')}</div>
 			</div>
 			<div class="text-center">
 				<div class="text-3xl font-bold text-gradient mb-2">100%</div>
-				<div class="text-white/70 text-sm">Rahulolev omanikud</div>
+				<div class="text-white/70 text-sm">{$_('about.motivation.stats.satisfaction')}</div>
 			</div>
 			<div class="text-center">
 				<div class="text-3xl font-bold text-gradient mb-2">∞</div>
-				<div class="text-white/70 text-sm">Soov päästa elusid</div>
+				<div class="text-white/70 text-sm">{$_('about.motivation.stats.dedication')}</div>
 			</div>
 		</div>
 	</div>

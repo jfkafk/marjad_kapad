@@ -1,5 +1,7 @@
 <script lang="ts">
-	export let mainTitle: string = "Kes me oleme?";
+	import { _ } from '$lib/i18n';
+
+	export let mainTitle: string = $_('about.us.mainTitle');
 	export let cards: Array<{
 		id: number;
 		title: string;
@@ -12,43 +14,63 @@
 	}> = [
 		{
 			id: 1,
-			title: "Sõbrad",
-			description: "Professionaalne koerte koolitamine ja käitumise parandamine. Meie kogenud treenerid aitavad teil luua tugeva side oma neljakäpalise sõbraga ning õpetada talle vajalikke käske ja käitumismustreid.",
+			title: $_('about.us.cards.card1.title'),
+			description: $_('about.us.cards.card1.description'),
 			imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=600&h=400&fit=crop",
 			imageAlt: "Koer õppimas käske",
-			features: ["Individuaalne lähenemine", "Kogenud treenerid", "Tulemused garanteeritud"],
+			features: [
+				$_('about.us.cards.card1.features.feature1'),
+				$_('about.us.cards.card1.features.feature2'),
+				$_('about.us.cards.card1.features.feature3')
+			],
 		},
 		{
 			id: 2,
-			title: "Vabas Õhus Liikujad",
-			description: "Täielik koerte hooldus ja iluteenused. Meie spetsialistid pakuvad teie lemmikulle parimat hooldust - alates pesemisest kuni küüniste lõikamiseni. Teie koer tuleb meie juurest värskena ja ilusana.",
+			title: $_('about.us.cards.card2.title'),
+			description: $_('about.us.cards.card2.description'),
 			imageUrl: "https://images.unsplash.com/photo-1560743173-567a3b5658b1?w=600&h=400&fit=crop",
 			imageAlt: "Koera pesemise protsess",
-			features: ["Kvaliteetsed tooted", "Sõbralik personal", "Mugav asukoht"],
+			features: [
+				$_('about.us.cards.card2.features.feature1'),
+				$_('about.us.cards.card2.features.feature2'),
+				$_('about.us.cards.card2.features.feature3')
+			],
 		},
 		{
 			id: 3,
-			title: "Õppurid",
-			description: "Tervislikud ja hästi sotsiaalsustatud kutsikad otstavad uut kodu. Meie kutsikad kasvavad armastuses ja hooles, saavad parima veterinaarse järelevalve ning on valmis saama teie pere lahutamatuks osaks.",
+			title: $_('about.us.cards.card3.title'),
+			description: $_('about.us.cards.card3.description'),
 			imageUrl: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&h=400&fit=crop",
 			imageAlt: "Armsad kutsikad",
-			features: ["Tervislikud kutsikad", "Kõik vajalikud dokumendid", "Eluaegne tugi"],
+			features: [
+				$_('about.us.cards.card3.features.feature1'),
+				$_('about.us.cards.card3.features.feature2'),
+				$_('about.us.cards.card3.features.feature3')
+			],
 		},
 		{
 			id: 4,
-			title: "Vabatathlikud",
-			description: "Kvalifitseeritud veterinaarabi teie lemmikutele. Meie kliinikud pakuvad täispikka meditsiinilist abi - alates regulaarsetest kontrollidest kuni keeruliste operatsioonideni. Teie lemmiku tervis on meie prioriteet.",
+			title: $_('about.us.cards.card4.title'),
+			description: $_('about.us.cards.card4.description'),
 			imageUrl: "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=600&h=400&fit=crop",
 			imageAlt: "Veterinaar koeraga",
-			features: ["24/7 hädaabi", "Kaasaegne tehnika", "Kogenud arstid"],
+			features: [
+				$_('about.us.cards.card4.features.feature1'),
+				$_('about.us.cards.card4.features.feature2'),
+				$_('about.us.cards.card4.features.feature3')
+			],
 		},
 		{
 			id: 5,
-			title: "Elupäästjad",
-			description: "Turvaline ja mugav koerte hotell teie puudumisel. Kui olete reisil või tööl, pakume teie lemmikule armastusrikast hooldust ja tähelepanu. Suured väljakud, mängukaaslased ja professionaalne personal.",
+			title: $_('about.us.cards.card5.title'),
+			description: $_('about.us.cards.card5.description'),
 			imageUrl: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=400&fit=crop",
 			imageAlt: "Koerad mängimas pensioni õues",
-			features: ["Päev- ja ööpension", "Mänguväljakud", "Individuaalne tähelepanu"],
+			features: [
+				$_('about.us.cards.card5.features.feature1'),
+				$_('about.us.cards.card5.features.feature2'),
+				$_('about.us.cards.card5.features.feature3')
+			],
 		}
 	];
 </script>
@@ -56,7 +78,7 @@
 <style>
     .main-container {
         width: 100%;
-        background: white;
+        background: whitesmoke;
         position: relative;
         overflow: hidden;
         padding: 2rem 0;
@@ -258,12 +280,12 @@
     }
 </style>
 
-<div class="main-container">
-	<div class="content-wrapper">
-		<div class="header-section">
-			<div class="divider"></div>
-			<div class="header-centre">
-				{mainTitle}
+<div class="main-container" id="us">
+	<!-- <div class="divider"></div> -->
+		<div class="content-wrapper">
+			<div class="header-section">
+				<div class="header-centre">
+					{mainTitle}
 			</div>
 		</div>
 

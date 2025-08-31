@@ -1,7 +1,7 @@
 <script lang="ts">
 	import comingSoonBack from '$lib/assets/marjad_kapad_logo_background.png';
 	import fbookIcon from '$lib/assets/facebook.svg';
-	import BlurredBackground from '$lib/components/BlurredBackground.svelte';
+	import DemoLandingBlurredBackground from '$lib/components/DemoLandingBlurredBackground.svelte';
 </script>
 
 <style>
@@ -56,8 +56,8 @@
 </style>
 
 <div class="coming-soon-container">
-	<!-- Use the new BlurredBackground component -->
-	<BlurredBackground imageUrl={comingSoonBack} />
+	<!-- Use the new DemoLandingBlurredBackground component -->
+	<DemoLandingBlurredBackground imageUrl={comingSoonBack} />
 
 	<div class="text_container">
 		<h1>Avame varsti!</h1>
