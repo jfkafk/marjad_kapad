@@ -7,7 +7,7 @@ const defaultLocale = 'et';
 register('et', () => Promise.resolve({
 	"nav": {
 		"home": "Lõuna-Eesti Märjad Käpad",
-		"about": "Märgadest Käppadest",
+		"about": "Meist",
 		"join": "Tule Osale",
 		"join_training": "Tule Trenni!",
 		"join_spectator": "Tule Vaatama!",
@@ -17,16 +17,20 @@ register('et', () => Promise.resolve({
 		"support": "Koostöö",
 		"store": "Käpapood",
 		"waterwork": "Veepäästest",
-		"member": "Liikmele"
+		"member": "Liikmele",
+		"dogs": "Koerad",
+		"trainers": "Treenerid",
+		"training": "Treeningud",
+		"partners": "Koostööpartnerid"
 	},
 	"footer": {
 		"contacts": {
 			"person1_name": "Valvi Väli",
-			"person1_title": "Peatreener",
+			"person1_title": "Peatreener / K9 instruktor",
 			"person2_name": "Toomas Tamm",
-			"person2_title": "Treener",
+			"person2_title": "K9 instruktor",
 			"person3_name": "Angela Leiaru",
-			"person3_title": "Treener"
+			"person3_title": "K9 instruktor"
 		},
 		"social": {
 			"facebook": "Jälgi meid Facebookis"
@@ -80,16 +84,20 @@ register('en', () => Promise.resolve({
 		"support": "Partnership",
 		"store": "Paw Shop",
 		"waterwork": "About Waterwork",
-		"member": "For Members"
+		"member": "For Members",
+		"dogs": "Dogs",
+		"trainers": "Trainers",
+		"training": "Training",
+		"partners": "Partners"
 	},
 	"footer": {
 		"contacts": {
 			"person1_name": "Valvi Väli",
-			"person1_title": "Head Coach",
+			"person1_title": "Head Coach/ K9 instructor",
 			"person2_name": "Toomas Tamm",
-			"person2_title": "Trainer",
+			"person2_title": "K9 Instructor",
 			"person3_name": "Angela Leiaru",
-			"person3_title": "Trainer"
+			"person3_title": "K9 Instructor"
 		},
 		"social": {
 			"facebook": "Follow us on Facebook"
